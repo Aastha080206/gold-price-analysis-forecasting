@@ -1,0 +1,144 @@
+/* ============================================================
+   CYBER-INDUSTRIAL GOLD UI (FINAL)
+   Sharp • Dark • Professional • Chart-Optimized
+============================================================ */
+
+/* --- REMOVE TOOLBAR & FOOTER (KEEP HEADER FOR SIDEBAR TOGGLE) --- */
+section[data-testid="stToolbar"],
+footer {
+    display: none !important;
+}
+
+
+/* --- GLOBAL BACKGROUND --- */
+.stApp {
+    background-color: #050505 !important;
+    background-image:
+        radial-gradient(at 0% 0%, rgba(250, 204, 21, 0.05) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(30, 58, 138, 0.08) 0px, transparent 50%);
+    color: #ffffff !important;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* --- MAIN CONTENT WIDTH --- */
+.block-container {
+    max-width: 1200px;
+    padding: 2.5rem 2rem;
+}
+
+/* --- SECTION / CARD BOXES --- */
+[data-testid="stVerticalBlock"] > div:has(div[data-testid="stPlotlyChart"]),
+div[data-testid="stMetric"],
+.stTabs,
+.stContainer {
+    background: #0e0e12 !important;
+    border: 2px solid #2d2d33 !important;
+    border-top: 4px solid #facc15 !important;
+    border-radius: 14px !important;
+    padding: 28px !important;
+    margin-bottom: 24px !important;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.7) !important;
+}
+
+/* --- TITLES --- */
+h1 {
+    font-size: 3rem !important;
+    font-weight: 900 !important;
+    color: #facc15 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #facc15;
+    padding-bottom: 10px;
+    margin-bottom: 35px !important;
+}
+
+h2, h3, p, span, label {
+    color: #ffffff !important;
+}
+
+/* --- SIDEBAR --- */
+section[data-testid="stSidebar"] {
+    background-color: #000000 !important;
+    border-right: 2px solid #facc15 !important;
+}
+
+section[data-testid="stSidebar"] * {
+    color: #ffffff !important;
+    font-size: 1.05rem !important;
+}
+
+/* --- SIDEBAR NAV --- */
+div[role="radiogroup"] label {
+    background: #111114;
+    border: 1px solid #333;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+div[role="radiogroup"] label:has(input:checked) {
+    border: 1px solid #facc15 !important;
+    background: rgba(250, 204, 21, 0.12) !important;
+}
+
+/* --- BUTTONS --- */
+.stButton button {
+    border: 2px solid #facc15 !important;
+    background: transparent !important;
+    color: #facc15 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    border-radius: 6px !important;
+    height: 3em !important;
+}
+
+.stButton button:hover {
+    background: #facc15 !important;
+    color: #000 !important;
+}
+
+/* --- CHART OVERRIDES --- */
+.js-plotly-plot .plotly .main-svg {
+    background: transparent !important;
+}
+
+/* --- GRID + TITLE POLISH --- */
+.js-plotly-plot .gridlayer path {
+    stroke-dasharray: 4 4;
+}
+
+.js-plotly-plot .plotly .gtitle {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+/* =================================================
+   SIDEBAR DOWNLOAD BUTTON (FEATURE 8)
+================================================= */
+
+/* Target Streamlit download button in sidebar */
+section[data-testid="stSidebar"] .stDownloadButton button {
+    width: 100%;
+    background: transparent !important;
+    border: 2px solid #facc15 !important;
+    color: #facc15 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 12px !important;
+    border-radius: 6px !important;
+    margin-top: 10px;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Hover effect */
+section[data-testid="stSidebar"] .stDownloadButton button:hover {
+    background: #facc15 !important;
+    color: #000000 !important;
+    box-shadow: 0 0 12px rgba(250, 204, 21, 0.6);
+}
+
+/* Remove focus blue outline */
+section[data-testid="stSidebar"] .stDownloadButton button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
